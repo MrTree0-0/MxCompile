@@ -1,0 +1,50 @@
+ASTtree use node to build and build the
+Build the Symbols while running on the tree
+Add the variable step by step: when we goes to a function,we build a function symbol with a hashmap about the variable&parameter
+1.If it decl twice, wrong
+2.If its usage before the decl
+3.The type word should not be void
+4.If case should not be empty?if(1){}
+5.A f(A x){return A.this}
+6.return type not right
+7.multiply def
+
+Then use a visitor to visit the tree to know more info &&
+1.find out is equal for both side
+2.before decl x = f(x)
+3.+both sides must be number >> &&
+Symbol is in the node
+
+
+About Nodes
+
+Node
+    ProgNode
+    ExprNode
+        AssignNode
+        SubscriptNode
+        BinaryNode
+        UnaryNode
+            PostfixNode
+            PrefixNode
+    TypeNode(BOOL | INT | STRING | VOID | ID)
+    LiteralNode(1-9, abc, bool, null, this)
+        FuncioncallNode
+        MemberaccessNode
+        NewNode
+    LoopStmtNode
+        IfNode
+        ForNode
+        WhileNode
+    JumpStmtNode
+        BreakNode
+        ContinueNode
+        ReturnNode
+    DeclNode
+        ClassDeclNode
+        FunctionDeclNode
+        VariableDeclNode
+
+//
+a++++;
+int[] a = new int[1][][1];
